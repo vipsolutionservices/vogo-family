@@ -1,0 +1,155 @@
+/*
+ Theme Name:   Woodmart Child
+ Description:  Woodmart Child Theme
+ Author:       XTemos
+ Author URI:   http://xtemos.com
+ Template:     woodmart
+ Version:      1.0.0
+ Text Domain:  woodmart
+*/
+
+
+.wc-wp-version-gte-53 .select2-container .select2-search--inline .select2-search__field {
+    padding: 0 0 0 3px;
+    min-height: 28px;
+    background-color: #fff;
+    border: 1px solid;
+    width: 1080px !important;
+    margin-top: 10px;
+}
+
+/* Floating labels – Cart shipping calculator */
+.vogo-float { position: relative; }
+.vogo-float > label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .15s ease;
+  pointer-events: none;
+  background: #fff;          /* ca să nu se vadă peste border */
+  padding: 0 6px;
+  line-height: 1.1;
+  color: #6b7280;            /* text gri */
+}
+
+/* Mai mult spațiu sus pentru eticheta micșorată */
+.vogo-float input,
+.vogo-float select {
+  padding-top: 16px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Când e focus sau are valoare, ridicăm & micșorăm eticheta */
+.vogo-float.is-focus > label,
+.vogo-float.has-value > label,
+.vogo-float input:focus ~ label,
+.vogo-float input:not(:placeholder-shown) ~ label {
+  top: 0;
+  transform: translateY(-50%) scale(.85);
+  color: #16a34a;            /* verdele temei; schimbă la nevoie */
+}
+
+/* Accent pe border la focus (respectă tema Woodmart dar îl subtilizăm) */
+.vogo-float.is-focus input,
+.vogo-float.is-focus select {
+  box-shadow: 0 0 0 1px rgba(22,163,74,.15);
+  border-color: #16a34a;
+}
+
+.wd-copyrights .wd-col-end {
+  font-size: 60%;
+}
+
+.open-app-bar .app-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.open-app-bar .app-buttons .store-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border: 1px solid #000;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.open-app-bar .app-buttons .store-badge img {
+  display: block;
+  height: auto;
+  filter: grayscale(1) brightness(0);
+}
+
+/*
+ * Header cleanup (vogo.family)
+ * - keeps help + account/login/register on one row
+ * - improves spacing/alignment and visual hierarchy in the top header area
+ */
+.whb-top-bar .wd-tools-element,
+.whb-top-bar .wd-header-my-account,
+.whb-top-bar .menu-item,
+.whb-top-bar .whb-text-element {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.whb-top-bar .wd-tools-element > a,
+.whb-top-bar .wd-header-my-account > a,
+.whb-top-bar .menu-item > a,
+.whb-top-bar .whb-text-element > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.whb-top-bar .wd-tools-element > a:hover,
+.whb-top-bar .wd-header-my-account > a:hover,
+.whb-top-bar .menu-item > a:hover,
+.whb-top-bar .whb-text-element > a:hover {
+  background: rgba(15, 81, 50, .08);
+  color: #0f5132;
+}
+
+.whb-top-bar .wd-header-my-account {
+  gap: 8px;
+}
+
+.whb-top-bar .wd-header-my-account .wd-tools-text,
+.whb-top-bar .wd-header-my-account .wd-tools-inner {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Keep help / account actions in one line and center them vertically */
+.whb-top-bar .whb-col-right,
+.whb-top-bar .whb-column,
+.whb-top-bar .wd-header-my-account {
+  align-items: center;
+}
+
+/* Better search alignment with the top navigation row */
+.whb-general-header .wd-search-form,
+.whb-general-header .wd-header-search-form {
+  margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+  .whb-top-bar .wd-tools-element > a,
+  .whb-top-bar .wd-header-my-account > a,
+  .whb-top-bar .menu-item > a,
+  .whb-top-bar .whb-text-element > a {
+    padding: 4px 8px;
+    gap: 4px;
+  }
+}

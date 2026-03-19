@@ -1,0 +1,18 @@
+.order-review-form .star {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+}
+.order-review-form .star.selected {
+  color: #f39c12;
+}
+.order-review-form .star.filled {
+  color: #f39c12;
+}
+.order-review-form textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+.order-review-form button {
+  margin-top: 10px;
+}

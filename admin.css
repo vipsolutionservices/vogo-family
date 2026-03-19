@@ -1,0 +1,10 @@
+
+.select2-container .select2-search--inline {
+    float: none !important;
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid #AAA;
+    /* border-radius: 4px; */
+    background-color: #FFF;
+    width: 400px !important;
+}

@@ -1,0 +1,98 @@
+.vogo-qna-question-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.vogo-qna-question-card {
+  padding: 8px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.vogo-qna-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.vogo-qna-question-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1d72b8;
+  text-decoration: none;
+}
+
+.vogo-qna-question-meta,
+.vogo-qna-question-author {
+  font-size: 13px;
+  color: #888;
+}
+
+.vogo-qna-reply {
+  margin-top: 6px;
+  background: #f9f9f9;
+  border-left: 3px solid #1d72b8;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+
+.vogo-qna-reply-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vogo-qna-reply-content {
+  font-size: 14px;
+  color: #333;
+  flex: 1;
+}
+
+.vogo-qna-reply-visibility {
+  font-size: 12px;
+  padding: 2px 6px;
+  background: #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.vogo-qna-reply-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.vogo-qna-edit-form {
+  margin-top: 10px;
+  background: #fff;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.vogo-qna-edit-textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.vogo-qna-edit-submit {
+  margin-top: 6px;
+  padding: 6px 12px;
+  background: #1d72b8;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+.vogo-qna-edit-close {
+  text-align: right;
+  margin-bottom: 5px;
+}

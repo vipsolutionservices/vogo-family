@@ -1,0 +1,22 @@
+https://test07.vogo.family/wp-admin/vogo-debug.php
+
+please re-wite this and use correct tables: SELECT id, `mall_name` ,position FROM `wp_mall_locations` order by position; 
+saved into, for each product: CREATE TABLE `wp_product_malls` ( 
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `product_id` BIGINT(20) UNSIGNED NOT NULL,
+  `mall_id` BIGINT(20) UNSIGNED NOT NULL;
+>>>> pentru orase avem: salvate pentru fiecare produs in : 
+SELECT `id`,`product_id`,`city_id` FROM `wp_product_cities` WHERE 1; 
+definite in : SELECT `id`,`city_name`,`status`,`position` FROM `wp_cities` WHERE 1 order by `position`
+
+sql pentru creat tabela noua: vogo_product_meta_action cu coloanele: id, product_id, product_main_category_id, camera_broadcast_url, zoom_live_call_link, whatsapp_contact_url, suggest_service_link, action_whatsapp_label,action_whatsapp_number, action_whatsapp_message,  action_url_label,action_url_link 
+
+sql pentru creat tabela noua: vogo_category_meta_action cu coloanele: id, category_id, camera_broadcast_url, zoom_live_call_link, whatsapp_contact_url, suggest_service_link, action_whatsapp_label,action_whatsapp_number, action_whatsapp_message,  action_url_label,action_url_link 
+
+mkdir -p ~/domains/vogo.family/public_html/test07/wp-content/themes/<child-theme>/woocommerce/cart
+cp ~/domains/vogo.family/public_html/test07/wp-content/plugins/woocommerce/templates/cart/shipping-calculator.php \
+   ~/domains/vogo.family/public_html/test07/wp-content/themes/<child-theme>/woocommerce/cart/shipping-calculator.php
+
+   cd ../public_html 
+   composer require stripe/stripe-php
+   

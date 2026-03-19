@@ -1,0 +1,74 @@
+/*
+
+<strong style="color:#009D81">Solicita un produs sau un serviciu premium</strong>
+
+VOGO GREEN:#0c542d
+rgb(12, 84, 45)
+
+whatsapp-uri vogo: 
++40786854023
++40742203383
+
+https://wa.me/40742203383?text=I%20contact%20you%20from%20vogo.family.%20Area%20of%20interest=%20;%20city=%20;%20subject=
+
+
+
+https://vogo.family/wp-admin/options.php
+
+Bun venit la VOGO! Vă rugăm să rețineți că accesul în clubul nostru exclusiv se face doar pe bază de invitație. Dacă nu aveți un cod, vă invităm să solicitați unul contactându-ne prin e-mail la vogo@viptess.com / sau  
+<a href="https://wa.me/40742203383?text=I%20contact%20you%20from%20vogo.family.%20Area%20of%20interest=%20;%20city=%20;%20subject=Sequest referral code" target=AB47773"_blank">
+  Contact on WhatsApp
+</a>
+ <br>Vă mulțumim!
+
+
+<a href="https://wa.me/40742203383?text=I%20contact%20you%20from%20vogo.family.%20Area%20of%20interest=%20;%20city=%20;%20subject=" target="_blank">
+  Contact on WhatsApp
+</a>
+
+-- SELECT option_id, option_name, option_value 
+update wp_options set option_value='<p>
+  Bun venit la <b>VOGO</b>! Accesul se face exclusiv pe bază de invitație.   Dacă nu aveți un cod de recomandare, vă invităm să solicitați unul prin e-mail la   <a href="mailto:vogo@viptess.com">vogo@viptess.com</a> sau pe 
+  <a href="https://wa.me/40742203383?text=I%20contact%20you%20from%20vogo.family.%20Request%20referral%20code" target="_blank"><b><u>WhatsApp</u></b></a>.
+  Vă mulțumim!
+</p>
+'
+-- WHERE option_value LIKE '%Bun venit la VOGO%';
+-- FROM wp_options 
+where option_name='woocommerce_registration_privacy_policy_text'
+limit 1
+
+
+<p>
+  Bun venit la <b>VOGO</b>! Accesul se face exclusiv pe bază de invitație. 
+  Dacă nu aveți un cod de recomandare, vă invităm să solicitați unul prin e-mail la   <a href="mailto:info@vogo.family">info@vogo.family</a> sau pe   <a href="https://wa.me/40742203383?text=I contact you from vogo.family. City: ; Register (Ambasador / Influencer / Customer / Vendor): ; Area of interest:" target="_blank"><b><u>WhatsApp</u></b></a>.
+  Vă mulțumim!
+</p>
+
+-- SELECT option_id, option_name, option_value 
+update wp_options set option_value=
+'<p>
+  Bun venit la <b>VOGO</b>! Accesul se face exclusiv pe bază de invitație. 
+  Dacă nu aveți un cod de recomandare, vă invităm să solicitați unul prin e-mail la   <a href="mailto:info@vogo.family">info@vogo.family</a> sau pe   <a href="https://wa.me/40742203383?text=I contact you from vogo.family. City: ; Register (Ambasador / Influencer / Customer / Vendor): ; Area of interest:" target="_blank"><b><u>WhatsApp</u></b></a>.
+  Vă mulțumim!
+</p>'
+
+-- WHERE option_value LIKE '%Bun venit la VOGO%';
+-- FROM wp_options 
+where option_name='woocommerce_registration_privacy_policy_text'
+limit 1
+
+
+-- code: AB47773
+
+
+
+
+
+
+
+*/
+
+customizari vogo: product recommandations si altele
+
+--- https://vogo.family/wp-admin/plugin-editor.php?file=vogo-personalization%2Fincludes%2Fproduct_recommendation.php&plugin=vogo-personalization%2Fvogo-personalization.php

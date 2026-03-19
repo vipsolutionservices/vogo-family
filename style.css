@@ -1,0 +1,19 @@
+/*
+ Theme Name:   Woodmart Child
+ Description:  Woodmart Child Theme
+ Author:       XTemos
+ Author URI:   http://xtemos.com
+ Template:     woodmart
+ Version:      1.0.0
+ Text Domain:  woodmart
+*/
+
+
+.wc-wp-version-gte-53 .select2-container .select2-search--inline .select2-search__field {
+    padding: 0 0 0 3px;
+    min-height: 28px;
+    background-color: #fff;
+    border: 1px solid;
+    width: 1080px !important;
+    margin-top: 10px;
+}
