@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/adria/.claude/projects/C--sources-vogo-family/**)",
+      "Read(//c/Users/adria/.claude/projects/C--sources-vogo-family//**)"
+    ]
+  }
+}

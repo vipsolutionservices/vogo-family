@@ -206,6 +206,7 @@ require_once get_stylesheet_directory() . '/inc/locations/elementor-city-address
 require_once get_stylesheet_directory() . '/inc/essentials/products.php';
 require_once get_stylesheet_directory() . '/inc/locations/city-location-shortcode.php';
 require_once get_stylesheet_directory() . '/inc/locations/city-category-shortcode.php';
+require_once get_stylesheet_directory() . '/inc/locations/vogo-mobile-categories-shortcode.php';
 require_once get_stylesheet_directory() . '/inc/shipping/saved-shipping-address.php';
 require_once get_stylesheet_directory(). '/inc/providers/init.php';
 require_once get_stylesheet_directory() . '/inc/review-orders/init.php';
