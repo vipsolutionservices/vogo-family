@@ -545,7 +545,7 @@ add_action('pre_get_posts', function ($query) {
 });
 ?>
     <div class="vogo-fixed-icons-box">
-        <a href="https://wa.me/400742203383" class="vogo-icon-link" target="_blank">
+        <a href="https://api.whatsapp.com/send/?phone=%2B400742203383&type=phone_number&app_absent=0" class="vogo-icon-link" target="_blank">
             <img src="<?php echo esc_url($base_url . '/2025/01/ql-contact.png'); ?>" class="vogo-fix-icon">
         </a>
         <a href="/my-account" class="vogo-icon-link">

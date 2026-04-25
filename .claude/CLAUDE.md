@@ -11,7 +11,7 @@
   - **Elementor** (majoritatea paginilor publice; URL-urile de editare conțin `action=elementor`)
   - **"The Essential Premium"** (unele post-uri / widget-uri)
 - **Custom plugins locale:** `plugins/vogo-notification-plugin`, `plugins/vogo-personalization`, `plugins/vogo-social-login`, `plugins/video-conferencing-with-zoom-api`
-- **Brand colors:** `#1A3D2B` (vogo green), `#a8e6b8` (accent)
+- **Brand colors:** `#1A3D2B` (vogoGreen), `#a8e6b8` (vogoAccent), `#1565C0` (vogoBlue)
 
 ### Ce ESTE în directorul local
 - `woodmark-child/` — child theme: `functions.php`, `custom-functions.php`, `api-functions.php`, `seo.php`, `perf.php`, `audit.php`, `mobile.php`, `inc/`, `inc-vogo/`, `woocommerce/` (template overrides)
@@ -148,6 +148,22 @@ INTREBARI:
 6. **Cere SQL/cod exact** când ai nevoie să replici logică (nu reinventa — copiază).
 7. **Acknowledge marker-e** (opțional, dar util în mesaje.txt): `[MOBILE READ: YYYY-MM-DD]`, `[MOBILE IMPLEMENTED: YYYY-MM-DD — scurt rezumat]` — pentru a închide un thread.
 
+### ROL — CONSUMATOR, NU DECIDENT
+
+**Backend-ul este sursa de adevăr. Tu doar îl consumi. NU sugerezi modificări, NU pui presiune, NU propui ce să schimbe.**
+
+- Backend-ul are sisteme LIVE, funcționale, deja rulate de luni/ani. Ele funcționează corect pentru clienții lor (mobile app, alte integrări).
+- Când scrii în `mesaje-woo-backend.txt` / `mesaje.txt`:
+  - Cere **informații** despre ce face sistemul (SQL exact, schema, filtre active, valori reale).
+  - NU cere modificări ("poți să schimbi endpoint-ul să...", "modifică să folosească term_order în loc de...").
+  - NU emite ultimatumuri ("am nevoie de X altfel blochez ceva").
+  - NU scrii "spune-mi EXPLICIT ce să folosesc" pe ton imperativ — ci "ce folosește actual sistemul?".
+- **Ton:** factual, neutru, colaborativ. Nu emotional, nu urgent artificial.
+- **Dacă ce vezi pe frontend diferă de ce așteptai**: problema e la tine (implementare greșită), nu la backend. Întrebi backend-ul ce VEDE sistemul lor, apoi te aliniezi.
+- Dacă chiar există un bug în backend → îl RAPORTEZI factual (un rând), nu propui tu fix-ul. Backend-ul decide ce face cu el.
+
+**Regulă scurtă:** "Lucrurile sunt deja făcute și funcționale. Tu nu schimbi lucruri acolo. Tu doar utilizezi ce funcționează deja și te informezi corespunzător." — user, 2026-04-21.
+
 ### Cand NU folosești fișierul
 - Informația e deja în `vogo-contracts/*.md` → citește contractul întâi.
 - Informația e în cod local (child theme, plugin custom) → grep + read.
@@ -225,7 +241,7 @@ When adding new code to critical sections, ADD appropriate `@AI:` tags to protec
 - Animations and transitions must be smooth and purposeful — not decorative noise
 - Every visual change must look better than what was there before, not just different
 - When in doubt about a design decision — propose 2-3 options with reasoning, let me decide
-- Brand colors for reference: #1A3D2B (vogo green), #a8e6b8 (accent)
+- Brand colors for reference: #1A3D2B (vogoGreen), #a8e6b8 (vogoAccent), #1565C0 (vogoBlue)
 
 ## When Something Is Unclear
 - Stop and ask a specific question before writing any code

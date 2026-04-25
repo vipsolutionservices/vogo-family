@@ -667,61 +667,61 @@ function shortcode_product_provider_links() {
     $button_style = 'padding:10px 10px;background: #e0e0e0; color:#000; text-decoration:none; border-radius:3px; display:flex;';
     // Help popup button always visible (especially for mobile users)
     // $output .= '<a href="#" class="small-screen-back-to-category" title="Ajutor"><img src="https://test07.vogo.family/wp-content/uploads/2025/06/window-close.256x256.png" style="width:30px; height:30px" class="product-close-button"></a>';
-    $output .= '<a href="#" class="small-screen-back-to-category" title="Ajutor"><span class="material-icons notranslate" style="    background: #e0e0e0;height: 42px; width: 42px;display: flex;justify-content: center;font-weight: bold;color: green;">close</span></a>';
+    $output .= '<a href="#" class="small-screen-back-to-category" title="Ajutor"><span class="material-icons notranslate" style="    background: #e0e0e0;height: 42px; width: 42px;display: flex;justify-content: center;font-weight: bold;color: #1565C0;">close</span></a>';
     $output .= '<div style="display:flex; gap:3px;" class="product-provider-links-buttons">';
 
         $default_camera = 'https://www.youtube.com/watch?v=klfxQuXT66s';
         if (!empty($camera)) {
-            $output .= '<a href="' . esc_url($camera) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Vizualizează camera live"><span class="material-icons notranslate" style="color:green;">live_tv</span></a>';
+            $output .= '<a href="' . esc_url($camera) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Vizualizează camera live"><span class="material-icons notranslate" style="color:#1565C0;">live_tv</span></a>';
         } else {
             /*
             $output .= '<button type="button" onclick="Swal.fire({ html: `<div style=&quot;display: flex; 
             align-items: center; gap: 10px;&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;font-size: 40px; 
-            color: green;&quot;>info</span><div>
+            color: #1565C0;&quot;>info</span><div>
             Informația este in curs de actualizare la vendor!</div></div>` })" style="' . 
             $button_style . 
-            '" title="Vizualizează camera live"><span class="material-icons notranslate" style="color:green;">live_tv</span></button>';
+            '" title="Vizualizează camera live"><span class="material-icons notranslate" style="color:#1565C0;">live_tv</span></button>';
             */
-            $output .= '<a href="' . esc_url($default_camera) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Vizualizează camera live"><span class="material-icons notranslate" style="color:green;">live_tv</span></a>';
+            $output .= '<a href="' . esc_url($default_camera) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Vizualizează camera live"><span class="material-icons notranslate" style="color:#1565C0;">live_tv</span></a>';
         }
 
 
 
     $default_videoconference = 'https://meet.google.com/wqk-pwmg-kox';
     if ($zoom) {
-        $output .= '<a href="' . esc_url($zoom) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Intră în apelul Zoom"><span class="material-icons notranslate" style="color:green;">videocam</span></a>';
+        $output .= '<a href="' . esc_url($zoom) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Intră în apelul Zoom"><span class="material-icons notranslate" style="color:#1565C0;">videocam</span></a>';
     } else {
         /*
         $output .= '<button type="button" onclick="Swal.fire({ html: `<div style=&quot;display: flex; align-items: center; 
         gap: 10px;&quot;><span class=&quot;material-icons notranslate&quot; 
-        style=&quot;font-size: 40px; color: green;&quot;>info</span><div>
+        style=&quot;font-size: 40px; color: #1565C0;&quot;>info</span><div>
         Informația este in curs de actualizare la vendor.
-        </div></div>` })" style="' . $button_style . '" title="Intră în apelul Zoom"><span class="material-icons notranslate" style="color:green;">videocam</span></button>';
+        </div></div>` })" style="' . $button_style . '" title="Intră în apelul Zoom"><span class="material-icons notranslate" style="color:#1565C0;">videocam</span></button>';
         */
         $output .= '<a href="' . esc_url($default_videoconference) . 
         '" target="_blank" class="provider-link-custom" style="' 
         . $button_style . 
-        '" title="Intră în videoconferință"><span class="material-icons notranslate" style="color:green;">videocam</span></a>';
+        '" title="Intră în videoconferință"><span class="material-icons notranslate" style="color:#1565C0;">videocam</span></a>';
     }
 
-$default_whatsapp = 'https://wa.me/40786854023?text=' . rawurlencode('Hello, I contact you from vogo.family. I need info related to ');
+$default_whatsapp = 'https://api.whatsapp.com/send/?phone=%2B40786854023&text=' . rawurlencode('Hello, I contact you from vogo.family. I need info related to ') . '&type=phone_number&app_absent=0';
 if (!empty($whatsapp)) {
-    $output .= '<a href="' . esc_url($whatsapp) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Chat pe WhatsApp"><span style="color:green;" class="notranslate material-icons no-boder">chat</span></a>';
+    $output .= '<a href="' . esc_url($whatsapp) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Chat pe WhatsApp"><span style="color:#25D366;" class="notranslate material-icons no-boder">chat</span></a>';
 } else {
     /*
-    $output .= '<button type="button" onclick="Swal.fire({ html: `<div style=&quot;display: flex; align-items: center; gap: 10px;&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;font-size: 40px; color: green;&quot;>info</span><div>
+    $output .= '<button type="button" onclick="Swal.fire({ html: `<div style=&quot;display: flex; align-items: center; gap: 10px;&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;font-size: 40px; color: #1565C0;&quot;>info</span><div>
     Informația este in curs de actualizare la vendor.</div>
-    </div>` })" style="' . $button_style . '" title="Chat pe WhatsApp"><span style="color:green;" class="notranslate material-icons">chat</span></button>';
+    </div>` })" style="' . $button_style . '" title="Chat pe WhatsApp"><span style="color:#1565C0;" class="notranslate material-icons">chat</span></button>';
     */
-    $output .= '<a href="' . esc_url($default_whatsapp) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Chat pe WhatsApp"><span style="color:green;" class="notranslate material-icons no-boder">chat</span></a>';
+    $output .= '<a href="' . esc_url($default_whatsapp) . '" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Chat pe WhatsApp"><span style="color:#25D366;" class="notranslate material-icons no-boder">chat</span></a>';
 }
 
 
-    $output .= '<button type="button" id="vogo-fav-btn" class="provider-link-custom" style="' . $button_style . '" title="Adaugă la favorite"><span class="material-icons notranslate" style="color:green;">favorite</span></button>';
-    $output .= '<a href="https://test07.vogo.family/recommend-new-service/" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Recomandă un nou serviciu"><span class="material-icons notranslate no-boder" style="color:green;">check_circle</span></a>';
+    $output .= '<button type="button" id="vogo-fav-btn" class="provider-link-custom" style="' . $button_style . '" title="Adaugă la favorite"><span class="material-icons notranslate" style="color:#1565C0;">favorite</span></button>';
+    $output .= '<a href="https://test07.vogo.family/recommend-new-service/" target="_blank" class="provider-link-custom" style="' . $button_style . '" title="Recomandă un nou serviciu"><span class="material-icons notranslate no-boder" style="color:#1565C0;">check_circle</span></a>';
 
    
-    $output .= '<button type="button" class="provider-link-custom nopopup" style="' . $button_style . '" title="Deschide explicațiile pentru pictograme" onclick="Swal.fire({title: &quot;Ce înseamnă aceste pictograme?&quot;, html: `<div style=&quot;text-align: left;&quot;><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:green;&quot;>live_tv</span><span> Vizualizează transmisiunea live</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:green;&quot;>videocam</span> <span>Participă la o întâlnire video</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:green;&quot;>chat</span><span> Contactează direct prin chat</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:green;&quot;>favorite</span><span> Salvează pentru mai târziu</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:green;&quot;>check_circle</span><span> Sugerează un serviciu nou<span></p></div>`, confirmButtonText: &quot;Închide&quot;})"><span style="color:green;" class="notranslate material-icons">help</span></button>';
+    $output .= '<button type="button" class="provider-link-custom nopopup" style="' . $button_style . '" title="Deschide explicațiile pentru pictograme" onclick="Swal.fire({title: &quot;Ce înseamnă aceste pictograme?&quot;, html: `<div style=&quot;text-align: left;&quot;><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:#1565C0;&quot;>live_tv</span><span> Vizualizează transmisiunea live</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:#1565C0;&quot;>videocam</span> <span>Participă la o întâlnire video</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:#1565C0;&quot;>chat</span><span> Contactează direct prin chat</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:#1565C0;&quot;>favorite</span><span> Salvează pentru mai târziu</span></p><p class=&quot;pop-paragraph&quot;><span class=&quot;material-icons notranslate&quot; style=&quot;color:#1565C0;&quot;>check_circle</span><span> Sugerează un serviciu nou<span></p></div>`, confirmButtonText: &quot;Închide&quot;})"><span style="color:#1565C0;" class="notranslate material-icons">help</span></button>';
 
      $output .= '</div>';
     $output .= '</div>';
@@ -1243,7 +1243,8 @@ function shortcode_product_action_buttons_with_labels() {
             $message = html_entity_decode($message, ENT_QUOTES | ENT_HTML5, 'UTF-8');
             $message = preg_replace('/\s*[\x{2013}\x{2014}\-]\s*/u', ' ', $message);
             $encoded_message = rawurlencode($message);
-            $wa_link = "https://wa.me/$whatsapp?text=$encoded_message";
+            // Format standard api.whatsapp.com — phone cu %2B prefix, + type + app_absent
+            $wa_link = "https://api.whatsapp.com/send/?phone=%2B{$whatsapp}&text={$encoded_message}&type=phone_number&app_absent=0";
 
             $output .= '<a href="' . esc_url($wa_link) . '" target="_blank" class="provider-link-custom-product-action" style="' . $button_style . '" title="' . esc_attr($label) . '">';
             if ($icon) {
