@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: VOGO WhatsApp Floating Button
- * Description: Site-wide floating WhatsApp actions with desktop/mobile visibility, corner or anchor positioning, identical api.whatsapp.com links across site. Minimal, fast, configurable.
- * Version: 1.2.1
+ * Description: Site-wide floating WhatsApp actions with desktop/mobile visibility, corner or anchor positioning, identical wa.me links across site. Minimal, fast, configurable.
+ * Version: 1.2.0
  * Author: VOGO.FAMILY
  * License: GPLv2 or later
  * Text Domain: vogo-whatsapp
@@ -11,7 +11,7 @@
 if (!defined('ABSPATH')) exit;
 
 /* ===== Constants ===== */
-define('VOGO_WA_VER', '1.2.1');
+define('VOGO_WA_VER', '1.2.0');
 define('VOGO_WA_SLUG', 'vogo-whatsapp');
 define('VOGO_WA_OPT',  'vogo_whatsapp_options');
 
@@ -154,8 +154,7 @@ function vogo_wa_get_href(int $id = 1): string {
     $current = $scheme . ($_SERVER['HTTP_HOST'] ?? '') . ($_SERVER['REQUEST_URI'] ?? '/');
     $msg = str_replace('{{url}}', $current, $msg);
   } else { $msg = str_replace('{{url}}','',$msg); }
-  // Format standard api.whatsapp.com cu phone prefix %2B (+) + type + app_absent
-  return 'https://api.whatsapp.com/send/?phone=%2B' . $phone . '&text=' . rawurlencode($msg) . '&type=phone_number&app_absent=0';
+  return 'https://wa.me/' . $phone . '?text=' . rawurlencode($msg);
 }
 
 function vogo_wa_render_link(int $id = 1, string $label = 'Solicită asistență acum', array $attrs = []): string {
@@ -228,7 +227,7 @@ add_action('wp_enqueue_scripts', function(){
     function btn(item){var a=document.createElement('a');a.className='vogo-wa-btn';a.target='_blank';a.rel='noopener';
       var phone=(item.phone||'').replace(/\\D+/g,'');var msg=String(item.msg||'');
       if(cfg.includeUrl){msg=msg.replace('{{url}}',location.href);} else {msg=msg.replace('{{url}}','');}
-      a.href='https://api.whatsapp.com/send/?phone=%2B'+phone+'&text='+encodeURIComponent(msg)+'&type=phone_number&app_absent=0'; a.textContent=item.label||'WhatsApp'; return a;}
+      a.href='https://wa.me/'+phone+'?text='+encodeURIComponent(msg); a.textContent=item.label||'WhatsApp'; return a;}
     root.innerHTML=''; var wrap=document.createElement('div'); wrap.className='vogo-wa-wrap';
     (cfg.items||[]).forEach(function(it){ if(it && it.phone){ wrap.appendChild(btn(it)); } }); root.appendChild(wrap);
     var isMobile=matchMedia('(max-width: 767px)').matches; var visible=isMobile?cfg.visible.mobile:cfg.visible.desktop;

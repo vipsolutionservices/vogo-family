@@ -52,7 +52,10 @@ function vogo_sort_by_referral_code($query) {
 }
 
 // Generate Referral Code on WooCommerce User Creation
-add_action('woocommerce_created_customer', 'vogo_generate_referral_code_for_woocommerce');
+// LEGACY: dezactivat 2026-04-25 - producea AB+uid in wp_usermeta, dublura cu wp_vogo_user_info.my_referral_code (U+uid).
+// Convenția canonică VOGO este U+uid in wp_vogo_user_info, gestionata de sync_vogo_user_info din vogo-plugin.
+// Functia ramane definita pentru backward compatibility daca alt cod o cheama explicit, dar hook-ul nu mai ruleaza.
+// add_action('woocommerce_created_customer', 'vogo_generate_referral_code_for_woocommerce');
 function vogo_generate_referral_code_for_woocommerce($customer_id) {
     if (!$customer_id) {
         error_log('Invalid customer ID passed to referral code generator.');

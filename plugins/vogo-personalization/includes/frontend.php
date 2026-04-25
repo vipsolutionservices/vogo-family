@@ -79,7 +79,9 @@ function vogo_validate_woocommerce_referral_code($errors, $username, $email) {
     return $errors;
 }
 
-add_action('woocommerce_created_customer', 'vogo_save_woocommerce_referral_code');
+// DIAGNOSTIC 2026-04-25: dezactivat - duplica logica din register-shortcode.php (parent_user_id in vogo_user_info).
+// Suspect ca poate cauza side-effect la register cu referral. Inlocuit complet de wp_vogo_user_info.parent_user_id.
+// add_action('woocommerce_created_customer', 'vogo_save_woocommerce_referral_code');
 function vogo_save_woocommerce_referral_code($customer_id) {
     if (!empty($_POST['referral_code'])) {
         $referral_code = sanitize_text_field($_POST['referral_code']);

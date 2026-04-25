@@ -71,16 +71,18 @@ add_action('wp_login', function($user_login, $user) {
 }, 10, 2);
 
 // 2. User Registration
-add_action('user_register', function($user_id) {
-    $user = get_userdata($user_id);
-    $data = [
-        'user_id' => $user_id,
-        'email' => $user->user_email,
-        'name' => $user->display_name,
-        'registered' => $user->user_registered,
-    ];
-    vogo_send_notification('user_register', $data);
-});
+// DIAGNOSTIC 2026-04-25: dezactivat temporar - suspect ca wp_remote_post sincron (timeout 10s)
+// blocheaza wc_create_new_customer la register cu referral. Re-activam dupa identificare cauza.
+// add_action('user_register', function($user_id) {
+//     $user = get_userdata($user_id);
+//     $data = [
+//         'user_id' => $user_id,
+//         'email' => $user->user_email,
+//         'name' => $user->display_name,
+//         'registered' => $user->user_registered,
+//     ];
+//     vogo_send_notification('user_register', $data);
+// });
 
 // 3. Order Placed
 add_action('woocommerce_thankyou', function($order_id) {

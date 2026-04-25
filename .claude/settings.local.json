@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/adria/.claude/projects/C--sources-vogo-family/**)",
-      "Read(//c/Users/adria/.claude/projects/C--sources-vogo-family//**)"
+      "Read(//c/Users/adria/.claude/projects/C--sources-vogo-family//**)",
+      "Read(//c/sources/VOGO/vogo-plugin/**)",
+      "Read(//c/sources/VOGO/vogo-plugin/sql/**)",
+      "Read(//c/sources/VOGO/vogo-plugin/rest/**)",
+      "Bash(php -l C:/sources/vogo.family/register-shortcode.php)",
+      "Read(//home/**)",
+      "Read(//c/sources/**)",
+      "Bash(grep -rln 'AB.*\\\\.\\\\.\\\\$user_id\\\\|'\\\\''AB'\\\\'' \\\\. \\\\$user' C:/sources/vogo.family)"
     ]
   }
 }

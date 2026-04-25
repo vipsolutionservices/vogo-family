@@ -5,23 +5,25 @@ function vogo_generate_referral_code($user_id) {
     return $referral_code;
 }
 
-add_action('user_register', function($user_id) {
-    if (!empty($_POST['referral_code'])) {
-        $referrer = get_users([
-            'meta_key' => 'referral_code',
-            'meta_value' => sanitize_text_field($_POST['referral_code']),
-            'number' => 1
-        ]);
-        if (!empty($referrer)) {
-            update_user_meta($user_id, 'referred_by', $referrer[0]->ID);
-            global $wpdb;
-            $wpdb->insert("{$wpdb->prefix}referrals", [
-                'referrer_id' => $referrer[0]->ID,
-                'referred_user_id' => $user_id
-            ]);
-        }
-    }
-});
+// LEGACY: dezactivat 2026-04-25 - scria in wp_referrals (tabel legacy, marcat pentru stergere) si user_meta 'referred_by'.
+// Inlocuit complet de wp_vogo_user_info.parent_user_id + used_refferal_code, gestionat de register-shortcode.php.
+// add_action('user_register', function($user_id) {
+//     if (!empty($_POST['referral_code'])) {
+//         $referrer = get_users([
+//             'meta_key' => 'referral_code',
+//             'meta_value' => sanitize_text_field($_POST['referral_code']),
+//             'number' => 1
+//         ]);
+//         if (!empty($referrer)) {
+//             update_user_meta($user_id, 'referred_by', $referrer[0]->ID);
+//             global $wpdb;
+//             $wpdb->insert("{$wpdb->prefix}referrals", [
+//                 'referrer_id' => $referrer[0]->ID,
+//                 'referred_user_id' => $user_id
+//             ]);
+//         }
+//     }
+// });
 
 add_action('woocommerce_account_dashboard', 'vogo_show_referral_qr_in_dashboard');
 

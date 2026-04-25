@@ -38,11 +38,10 @@
   menu.className = 'vogo-wa-menu vogo-wa-hide';
 
   function hrefFor(it){
-    // Format standard api.whatsapp.com cu phone %2B prefix + type + app_absent
-    var phone = String(it.phone||'').replace(/\D+/g,'');
+    var base = 'https://wa.me/' + String(it.phone||'').replace(/\D+/g,'');
     var msg = String(it.msg||'');
     if(C.includeUrl){ msg = msg.replace('{{url}}', window.location.href); }
-    return 'https://api.whatsapp.com/send/?phone=%2B' + phone + '&text=' + encodeURIComponent(msg) + '&type=phone_number&app_absent=0';
+    return base + '?text=' + encodeURIComponent(msg);
   }
 
   (C.items||[]).forEach(function(it){
